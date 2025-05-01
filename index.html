@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crazy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="cen">
+        <h3>今天是星期几呢？请选择</h3>
+        <select name="week" id="answer" >
+            <option value="1">星期日</option>
+            <option value="2">星期一</option>
+            <option value="3">星期二</option>
+            <option value="4">星期三</option>
+            <option value="5">星期四</option>
+            <option value="6">星期五</option>
+            <option value="7">星期六</option>
+        </select>
+        <button onclick="gopage()">确定</button>
+    </div>
+</body>
+<script>
+    function gopage() {
+        const selectElement =document.getElementById("answer");
+        const selectedValue=selectElement.value;
+
+        if (selectedValue === "5"){
+            window.location.href="next.html";
+        } else {
+            alert("请重新选择今日的星期！")
+        }
+    }
+</script>
+</html>
